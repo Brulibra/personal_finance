@@ -19,12 +19,14 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Despesas Pessoais')),
-      body: Column(
-        crossAxisAlignment: .stretch,
-        children: <Widget>[
-          SizedBox(child: Card(elevation: 5, child: Text('Gráfico'))),
-          TransactionUser(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: .stretch,
+          children: <Widget>[
+            SizedBox(child: Card(elevation: 5, child: Text('Gráfico'))),
+            TransactionUser(),
+          ],
+        ),
       ),
     );
   }
