@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 import '../components/transaction_form.dart';
 import '../components/transaction_list.dart';
@@ -9,11 +8,38 @@ import '../models/transaction.dart';
 void main() => runApp(FinanceApp());
 
 class FinanceApp extends StatelessWidget {
-  const FinanceApp({super.key});
+  FinanceApp({super.key});
+  final ThemeData theme = ThemeData();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MyHomePage());
+    return MaterialApp(
+      home: MyHomePage(),
+      //Theme Definition
+      theme: ThemeData(
+        //Fonts
+        textTheme: TextTheme(
+          titleLarge: TextStyle(
+            fontSize: 25,
+            fontFamily: 'OpenSans',
+            fontWeight: FontWeight.bold,
+          ),
+          bodyMedium: TextStyle(fontSize: 16),
+        ),
+        fontFamily: 'Quicksand',
+        //Colors
+        useMaterial3: true,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.purple,
+          foregroundColor: Colors.white,
+        ),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.amber,
+          primary: Colors.purple,
+          secondary: Colors.amber,
+        ),
+      ),
+    );
   }
 }
 
@@ -70,7 +96,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Despesas Pessoais'),
+        title: Text(
+          'Despesas Pessoais',
+          style: TextStyle(fontFamily: 'OpenSans'),
+        ),
+
         actions: <Widget>[
           IconButton(
             onPressed: () => _openTransactionModal(context),
