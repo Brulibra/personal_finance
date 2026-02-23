@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_finance/components/chart.dart';
 import 'dart:math';
 
 import '../components/transaction_form.dart';
@@ -52,18 +53,18 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final _transactions = [
-    Transaction(
-      id: 't1',
-      title: 'cafeteria',
-      value: 52.80,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'conta de luz',
-      value: 197.76,
-      date: DateTime.now(),
-    ),
+    // Transaction(
+    //   id: 't1',
+    //   title: 'cafeteria',
+    //   value: 52.80,
+    //   date: DateTime.now(),
+    // ),
+    // Transaction(
+    //   id: 't2',
+    //   title: 'conta de luz',
+    //   value: 197.76,
+    //   date: DateTime.now(),
+    // ),
   ];
 
   void _addTransaction(String newTitle, double newValue) {
@@ -112,8 +113,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           crossAxisAlignment: .stretch,
           children: <Widget>[
-            SizedBox(child: Card(elevation: 5, child: Text('Gráfico'))),
-            TransactionList(transactions: _transactions),
+            Chart(recentTransaction: []),
+            TransactionList(transactions: []),
           ],
         ),
       ),
