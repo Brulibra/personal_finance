@@ -16,7 +16,7 @@ ____
 # CHANGELOG
 ______
 
-### [1.0.0] - 19.02.2026
+### [1.1.0] - 19.02.2026
 
 #### Start Project
 
@@ -27,3 +27,15 @@ ______
 > Bugs: Input de valor funciona apenas com pontos no lugar das vírgulas
 ____
 
+### [2.1.0] - 23.02.2026
+
+#### Start Project
+
+1. Adição de assets
+    1. Fontes
+    2. Imagens
+2. Criação do Tema 
+3. Criação do Gráfico de resumo de gastos semanais
+
+> 🐛 Input de valor funciona apenas com pontos no lugar das vírgulas
+> 🐛 Transactions não altera estado após cadastrar nova alteração
